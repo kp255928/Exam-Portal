@@ -14,7 +14,6 @@ import javax.persistence.Table;
 @Table(name = "roles")
 public class Role {
     @Id
-    
     private Long roleId;
     private String roleName;
     //
@@ -22,7 +21,6 @@ public class Role {
     private Set<UserRole> userRoles = new HashSet<>();
 
     public Role(){
-        
     }
 
     public Role(Long roleId, String roleName) {

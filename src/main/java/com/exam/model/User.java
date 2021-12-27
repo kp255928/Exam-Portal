@@ -17,12 +17,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "users")
-
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "userId", nullable = false)
+    //Column(name = "userId", nullable = false)
     private Long id;
     private String username;
     private String password;
