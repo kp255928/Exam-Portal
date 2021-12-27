@@ -9,6 +9,7 @@ import com.exam.model.UserRole;
 import com.exam.service.UserService;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -45,5 +46,11 @@ public class UserController {
 
         return this.userService.getUser(username);
 
+    }
+
+    //deletion by id
+    @DeleteMapping("/{userId}")
+    public void deleteUser(@PathVariable("userId") long userId){
+        this.userService.deleteUser(userId);
     }
 }
